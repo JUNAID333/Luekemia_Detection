@@ -1,0 +1,39 @@
+{% extends "Home.html" %} {% block content %}
+<center>
+<h2 style="color:rgb(0, 89, 167);">Please Upload an Image for detection of Leukemia</h2>
+
+<div>
+    <form id="upload-file" method="post" enctype="multipart/form-data">
+        <label for="imageUpload" class="upload-label">
+            Choose...
+        </label>
+        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+    </form>
+
+    <div class="image-section" style="display:none;">
+        <div class="img-preview">
+            <div id="imagePreview">
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Detect!</button>
+        </div>
+    </div>
+
+    <div class="loader" style="display:none;"></div>
+
+    <h3 style="width:fit-content; color: rgb(4, 0, 255);  background: rgb(255, 255, 255); background-position: inherit;" id="result">
+        <span> </span>
+    </h3>
+
+</div>
+
+
+</center>
+</div>
+        <footer class="mt-auto text-white-50 justify-content-center d-flex">
+                <p  style=" background-color: rgb(255, 255, 255); color: blue; font-family: 'Rajdhani', sans-serif ;">Developed by <a style="color: blueviolet; text-decoration: underline; " href="https://github.com/Final-Year-Project-A8-Batch" class="" target="__blank__"><u>Team A8 &copy </u></a></p>
+        </footer> 
+    </div>
+
+{% endblock %}
